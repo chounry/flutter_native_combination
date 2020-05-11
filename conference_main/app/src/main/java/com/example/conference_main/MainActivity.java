@@ -7,8 +7,11 @@ import android.view.View;
 import android.widget.TextView;
 
 import io.flutter.embedding.android.FlutterActivity;
+import io.flutter.embedding.engine.FlutterEngine;
+import io.flutter.plugin.common.MethodChannel;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends FlutterActivity {
+    private String CHANNEL = "samples.flutter.dev/battery";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,4 +25,9 @@ public class MainActivity extends AppCompatActivity {
             );
         });
     }
+
+//    @Override
+//    public void configureFlutterEngine(FlutterEngine flutterEngine) {
+//        MethodChannel(flutterEngine.getDartExecutor().getBinaryMessenger(),
+//    }
 }
